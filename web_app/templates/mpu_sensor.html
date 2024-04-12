@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">MPU6050 Sensor Data Live</div>
+
+    <div class="card-body">
+      <h3 class="card-text">Accelerometer Data:</h3>
+      <p>X: {{ accelerometer_data.x }}</p>
+      <p>Y: {{ accelerometer_data.y }}</p>
+      <p>Z: {{ accelerometer_data.z }}</p>
+
+      <h3 class="card-text">Gyroscope Data:</h3>
+      <p>X: {{ gyro_data.x }}</p>
+      <p>Y: {{ gyro_data.y }}</p>
+      <p>Z: {{ gyro_data.z }}</p>
+    </div>
+  </div>
+
+  <p>Go back to <a href="{{ url_for('dashboard') }}">dashboard</a></p>
+</div>
+
+{% endblock %}

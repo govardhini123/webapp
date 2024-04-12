@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Sensor Data Live</div>
+
+    <div class="card-body">
+      <h3 class="card-text">Temperature <strong> {{temperature}} </strong> C </h3>
+      <h3 class="card-text">Humidity <strong> {{humidity}}  </strong> %</h3>
+
+    </div>
+  </div>
+
+  <p>go back to<a href="{{url_for('dashboard')}}">dashboard  </a></p>
+
+
+
+
+{%  endblock  %}
